@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as XLSX from "xlsx";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../style.css";
 
 function FileInput() {
   const [items, setItems] = useState([]);
@@ -38,22 +39,26 @@ function FileInput() {
     }
   }
   return (
-    <div className="container">
-      <input
-        accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-        type="file"
-        onChange={(e) => {
-          console.log(e.target.files);
-          const files = e.target.files;
-          const firstFile = files[0];
-          readExcel(firstFile);
-        }}
-      />
-      <br />
-      <small>Please note: Only SaudaTech Excel sheet file is supported.</small>
+    <div className="m-0">
+      <form>
+        <input
+          accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          type="file"
+          onChange={(e) => {
+            console.log(e.target.files);
+            const files = e.target.files;
+            const firstFile = files[0];
+            readExcel(firstFile);
+          }}
+        />
+        <br />
+        <small>
+          Please note: Only SaudaTech Excel sheet file is supported.
+        </small>
+      </form>
 
       {/* table data */}
-      <table className="table table-striped table-hover">
+      <table className="table table-striped table-hover ">
         <thead>
           <tr>
             <th>Confirmation Id.</th>
