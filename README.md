@@ -5,7 +5,7 @@ This project is pointing to the Task 3.
 Task 3: User Interface
 An excel file [""""SaudaBookTrades.xlsx""""] will be shared. Build a ReactJS website that can import and showcase the data inside the Excel Sheet.
 
-## Hosting Link
+## Hosted Link
 
 The project is hosted on the Netlify Hosting Service [Application](https://practical-thompson-6d2ff3.netlify.app/)
 
